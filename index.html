@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarkeshwar Tech Studio | Web & App Solutions</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: #f8fafc; line-height: 1.6; }
+        header { padding: 20px 5%; background: #1e293b; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #38bdf8; }
+        .lang-btn { background: #3b82f6; color: white; border: none; padding: 8px 16px; cursor: pointer; border-radius: 6px; font-weight: bold; }
+        .hero { text-align: center; padding: 60px 20px; background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%); }
+        .hero h1 { font-size: 2.5rem; color: #f1f5f9; margin-bottom: 15px; }
+        .hero p { color: #94a3b8; max-width: 700px; margin: 0 auto 25px; font-size: 1.1rem; }
+        
+        .section-title { text-align: center; margin: 50px 0 20px; font-size: 2rem; color: #38bdf8; }
+        .problems-grid, .pricing-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; padding: 0 5%; }
+        
+        .card { background: #1e293b; padding: 25px; border-radius: 10px; width: 300px; border: 1px solid #334155; }
+        .problem-card h3 { color: #f43f5e; margin-bottom: 10px; }
+        
+        .pricing-card { border: 2px solid #334155; position: relative; text-align: center; }
+        .pricing-card.popular { border-color: #38bdf8; }
+        .badge { background: #38bdf8; color: #0f172a; padding: 4px 12px; border-radius: 12px; font-size: 0.8rem; font-weight: bold; position: absolute; top: -12px; right: 20px; }
+        .price { font-size: 2rem; font-weight: bold; color: #22c55e; margin: 15px 0; }
+        .features-list { text-align: left; list-style: none; margin: 20px 0; color: #cbd5e1; }
+        .features-list li { margin-bottom: 8px; }
+        
+        .btn { display: inline-block; background: #22c55e; color: white; text-decoration: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; width: 100%; border: none; cursor: pointer; text-align: center; }
+        .btn-outline { background: transparent; border: 2px solid #38bdf8; color: #38bdf8; }
+        
+        footer { text-align: center; padding: 30px; margin-top: 50px; background: #1e293b; color: #64748b; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Tarkeshwar Tech Studio</div>
+        <div>
+            <button class="lang-btn" onclick="setLanguage('en')">English</button>
+            <button class="lang-btn" onclick="setLanguage('hi')">हिंदी</button>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1 id="hero-title">We Solve Your Digital Growth Problems</h1>
+        <p id="hero-desc">Struggling with slow websites, high app development costs, or lack of AI tools? We build high-performance solutions tailored to your budget.</p>
+        <a href="https://wa.me/910000000000" class="btn" style="width: auto; padding: 12px 30px;" id="hero-cta">Get Free Consultation</a>
+    </div>
+
+    <!-- Problems We Solve Section -->
+    <h2 class="section-title" id="prob-title">Problems We Solve</h2>
+    <div class="problems-grid">
+        <div class="card problem-card">
+            <h3 id="p1-t">❌ High Development Cost</h3>
+            <p id="p1-d">Agencies charge thousands of dollars. We provide budget-friendly web and app solutions for startups and small businesses.</p>
+        </div>
+        <div class="card problem-card">
+            <h3 id="p2-t">❌ Slow & Old Websites</h3>
+            <p id="p2-d">Outdated sites lose clients. We build lightning-fast, modern, mobile-responsive web applications.</p>
+        </div>
+        <div class="card problem-card">
+            <h3 id="p3-t">❌ Missing AI Integration</h3>
+            <p id="p3-d">Not using AI features? We integrate custom AI chatbots, image generators, and automation into your platform.</p>
+        </div>
+    </div>
+
+    <!-- Pricing Plans Section -->
+    <h2 class="section-title" id="plan-title">Choose Your Plan</h2>
+    <div class="pricing-grid">
+        <!-- Basic Plan -->
+        <div class="card pricing-card">
+            <h3 id="plan1-name">Starter Website</h3>
+            <div class="price" id="plan1-price">$99 / ₹4,999</div>
+            <ul class="features-list">
+                <li id="p1-f1">✔ 1-3 Pages Responsive Site</li>
+                <li id="p1-f2">✔ Fast Speed Optimization</li>
+                <li id="p1-f3">✔ WhatsApp Direct Chat</li>
+                <li id="p1-f4">✔ Free Hosting Setup</li>
+            </ul>
+            <a href="https://wa.me/910000000000?text=I%20want%20Starter%20Plan" class="btn btn-outline" id="plan1-btn">Select Plan</a>
+        </div>
+
+        <!-- Standard Plan -->
+        <div class="card pricing-card popular">
+            <div class="badge">MOST POPULAR</div>
+            <h3 id="plan2-name">Business Web + App</h3>
+            <div class="price" id="plan2-price">$249 / ₹14,999</div>
+            <ul class="features-list">
+                <li id="p2-f1">✔ Full Custom Website</li>
+                <li id="p2-f2">✔ Android App Version</li>
+                <li id="p2-f3">✔ Admin Dashboard</li>
+                <li id="p2-f4">✔ Dual Language Support</li>
+            </ul>
+            <a href="https://wa.me/910000000000?text=I%20want%20Business%20Plan" class="btn" id="plan2-btn">Select Plan</a>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="card pricing-card">
+            <h3 id="plan3-name">AI Integrated SaaS</h3>
+            <div class="price" id="plan3-price">$499 / ₹29,999</div>
+            <ul class="features-list">
+                <li id="p3-f1">✔ Custom Web & Mobile App</li>
+                <li id="p3-f2">✔ AI API Integration</li>
+                <li id="p3-f3">✔ Payment Gateway Setup</li>
+                <li id="p3-f4">✔ 1 Month Free Support</li>
+            </ul>
+            <a href="https://wa.me/918210151185?text=I%20want%20AI%20Plan" class="btn btn-outline" id="plan3-btn">Select Plan</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Tarkeshwar Tech Studio. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const langData = {
+            en: {
+                ht: "We Solve Your Digital Growth Problems",
+                hd: "Struggling with slow websites, high app development costs, or lack of AI tools? We build high-performance solutions tailored to your budget.",
+                hcta: "Get Free Consultation",
+                probt: "Problems We Solve",
+                p1t: "❌ High Development Cost", p1d: "Agencies charge huge fees. We provide budget-friendly web and app solutions for startups and small businesses.",
+                p2t: "❌ Slow & Old Websites", p2d: "Outdated sites lose clients. We build lightning-fast, modern, mobile-responsive web applications.",
+                p3t: "❌ Missing AI Integration", p3d: "Not using AI features? We integrate custom AI chatbots, image generators, and automation into your platform.",
+                plant: "Choose Your Plan",
+                p1n: "Starter Website", p1p: "$99 / ₹4,999", p1btn: "Select Plan",
+                p1f1: "✔ 1-3 Pages Responsive Site", p1f2: "✔ Fast Speed Optimization", p1f3: "✔ WhatsApp Direct Chat", p1f4: "✔ Free Hosting Setup",
+                p2n: "Business Web + App", p2p: "$249 / ₹14,999", p2btn: "Select Plan",
+                p2f1: "✔ Full Custom Website", p2f2: "✔ Android App Version", p2f3: "✔ Admin Dashboard", p2f4: "✔ Dual Language Support",
+                p3n: "AI Integrated SaaS", p3p: "$499 / ₹29,999", p3btn: "Select Plan",
+                p3f1: "✔ Custom Web & Mobile App", p3f2: "✔ AI API Integration", p3f3: "✔ Payment Gateway Setup", p3f4: "✔ 1 Month Free Support"
+            },
+            hi: {
+                ht: "हम आपकी डिजिटल समस्याओं का समाधान करते हैं",
+                hd: "क्या आप धीमी वेबसाइट, ऐप डेवलपमेंट के भारी खर्च या AI टूल्स की कमी से परेशान हैं? हम आपके बजट के अनुसार हाई-क्वालिटी सॉल्यूशन बनाते हैं।",
+                hcta: "मुफ्त सलाह लें",
+                probt: "हम कौन-सी समस्याएं हल करते हैं",
+                p1t: "❌ ज्यादा डेवलपमेंट खर्च", p1d: "बड़ी एजेंसियां भारी फीस लेती हैं। हम स्टार्टअप्स और छोटे बिज़नेस के लिए बजट-फ्रेंडली वेबसाइट और ऐप बनाते हैं।",
+                p2t: "❌ धीमी और पुरानी वेबसाइट", p2d: "पुरानी वेबसाइट्स से ग्राहक चले जाते हैं। हम बेहद तेज, मॉडर्न और मोबाइल-फ्रेंडली ऐप्स बनाते हैं।",
+                p3t: "❌ AI फीचर्स न होना", p3d: "क्या आप AI का इस्तेमाल नहीं कर पा रहे? हम आपके प्लेटफार्म में स्मार्ट AI बॉट्स और ऑटोमेशन जोड़ते हैं।",
+                plant: "अपना प्लान चुनें",
+                p1n: "स्टार्टर वेबसाइट", p1p: "₹4,999 / $99", p1btn: "प्लाॅन चुनें",
+                p1f1: "✔ 1-3 पेजेस रिस्पॉन्सिव साइट", p1f2: "✔ फास्ट स्पीड ऑप्टिमाइजेशन", p1f3: "✔ व्हाट्सएप डायरेक्ट चैट", p1f4: "✔ फ्री होस्टिंग सेटअप",
+                p2n: "बिज़नेस वेब + ऐप", p2p: "₹14,999 / $249", p2btn: "प्लाॅन चुनें",
+                p2f1: "✔ कम्पलीट कस्टम वेबसाइट", p2f2: "✔ एंड्रॉइड ऐप वर्जन", p2f3: "✔ एडमिन डैशबोर्ड", p2f4: "✔ डुअल लैंग्वेज सपोर्ट",
+                p3n: "AI इंटीग्रेटेड SaaS", p3p: "₹29,999 / $499", p3btn: "प्लाॅन चुनें",
+                p3f1: "✔ कस्टम वेब और मोबाइल ऐप", p3f2: "✔ AI API इंटीग्रेशन", p3f3: "✔ पेमेंट गेटवे सेटअप", p3f4: "✔ 1 महीना फ्री सपोर्ट"
+            }
+        };
+
+        function setLanguage(lang) {
+            document.getElementById('hero-title').innerText = langData[lang].ht;
+            document.getElementById('hero-desc').innerText = langData[lang].hd;
+            document.getElementById('hero-cta').innerText = langData[lang].hcta;
+            document.getElementById('prob-title').innerText = langData[lang].probt;
+            document.getElementById('p1-t').innerText = langData[lang].p1t; document.getElementById('p1-d').innerText = langData[lang].p1d;
+            document.getElementById('p2-t').innerText = langData[lang].p2t; document.getElementById('p2-d').innerText = langData[lang].p2d;
+            document.getElementById('p3-t').innerText = langData[lang].p3t; document.getElementById('p3-d').innerText = langData[lang].p3d;
+            document.getElementById('plan-title').innerText = langData[lang].plant;
+            
+            document.getElementById('plan1-name').innerText = langData[lang].p1n;
+            document.getElementById('plan1-price').innerText = langData[lang].p1p;
+            document.getElementById('plan1-btn').innerText = langData[lang].p1btn;
+            document.getElementById('p1-f1').innerText = langData[lang].p1f1;
+            document.getElementById('p1-f2').innerText = langData[lang].p1f2;
+            document.getElementById('p1-f3').innerText = langData[lang].p1f3;
+            document.getElementById('p1-f4').innerText = langData[lang].p1f4;
+
+            document.getElementById('plan2-name').innerText = langData[lang].p2n;
+            document.getElementById('plan2-price').innerText = langData[lang].p2p;
+            document.getElementById('plan2-btn').innerText = langData[lang].p2btn;
+            document.getElementById('p2-f1').innerText = langData[lang].p2f1;
+            document.getElementById('p2-f2').innerText = langData[lang].p2f2;
+            document.getElementById('p2-f3').innerText, langData[lang].p2f3;
+            document.getElementById('p2-f4').innerText = langData[lang].p2f4;
+
+            document.getElementById('plan3-name').innerText = langData[lang].p3n;
+            document.getElementById('plan3-price').innerText = langData[lang].p3p;
+            document.getElementById('plan3-btn').innerText = langData[lang].p3btn;
+            document.getElementById('p3-f1').innerText = langData[lang].p3f1;
+            document.getElementById('p3-f2').innerText = langData[lang].p3f2;
+            document.getElementById('p3-f3').innerText = langData[lang].p3f3;
+            document.getElementById('p3-f4').innerText = langData[lang].p3f4;
+        }
+    </script>
+</body>
+</html>
